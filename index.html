@@ -1,12 +1,229 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>JointConn-v2</title>
-  </head>
-  <body style="font-family:Arial;padding:40px">
-    <h1>It works ✅</h1>
-    <p>If you can see this, GitHub Pages is serving index.html correctly.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Paper Title</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Sticky top nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#">Project Page</a>
+      <div class="nav-links">
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#ablations">Ablations</a>
+        <a href="#runtime">Runtime</a>
+        <a href="#failures">Failures</a>
+        <a href="#video">Video</a>
+        <a href="#bibtex">BibTeX</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <h1>Your Paper Title</h1>
+      <p class="sub">Submitted to XXX 2026 (Double-blind)</p>
+      <p class="authors">Anonymous Authors</p>
+
+      <div class="btns">
+        <a class="btn" href="paper/paper.pdf" target="_blank" rel="noopener">Paper</a>
+        <a class="btn" href="paper/supp.pdf" target="_blank" rel="noopener">Supplementary</a>
+        <a class="btn" href="#results">More Results</a>
+        <a class="btn ghost" href="#bibtex">BibTeX</a>
+      </div>
+
+      <div class="teaser">
+        <img src="assets/teaser.png" alt="teaser" />
+        <div class="cap">Teaser: One-sentence summary of what the figure shows.</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Abstract -->
+    <section id="abstract" class="section">
+      <h2>Abstract</h2>
+      <p>
+        Paste your abstract here. Keep it short—reviewers want quick context.
+      </p>
+      <div class="callouts">
+        <div class="card">
+          <h3>Key Idea</h3>
+          <p>One-line description of the main idea.</p>
+        </div>
+        <div class="card">
+          <h3>What’s New</h3>
+          <p>Two or three bullets of contributions.</p>
+        </div>
+        <div class="card">
+          <h3>Why It Works</h3>
+          <p>Short intuition / mechanism.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Method -->
+    <section id="method" class="section">
+      <h2>Method</h2>
+      <img class="figure" src="assets/method.png" alt="method overview" />
+      <p class="cap">Figure: Overall pipeline.</p>
+
+      <div class="twocol">
+        <div class="card">
+          <h3>Architecture</h3>
+          <ul>
+            <li>Backbone: XXX</li>
+            <li>Conditioning: text / depth / edges / seg</li>
+            <li>Training objective: XXX</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Implementation</h3>
+          <ul>
+            <li>Resolution: 512</li>
+            <li>Steps: 30 / sampler: XXX</li>
+            <li>Hardware: A100 / etc.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main results -->
+    <section id="results" class="section">
+      <h2>Main Results</h2>
+      <p class="muted">Show the most convincing comparisons first (1–2 screens).</p>
+
+      <div class="grid">
+        <figure>
+          <img src="assets/results/main_cmp1.png" alt="main cmp1" />
+          <figcaption>Dataset A: Ours vs Baseline.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/results/main_cmp2.png" alt="main cmp2" />
+          <figcaption>Dataset B: Ours preserves geometry better.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/results/main_cmp3.png" alt="main cmp3" />
+          <figcaption>Hard case: fine structures.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- More comparisons (collapsible) -->
+    <section class="section">
+      <h2>More Comparisons</h2>
+
+      <details open>
+        <summary>Dataset / Setting 1</summary>
+        <div class="grid">
+          <figure><img src="assets/results/cmp_s1_1.png" alt=""><figcaption>Case 1</figcaption></figure>
+          <figure><img src="assets/results/cmp_s1_2.png" alt=""><figcaption>Case 2</figcaption></figure>
+          <figure><img src="assets/results/cmp_s1_3.png" alt=""><figcaption>Case 3</figcaption></figure>
+        </div>
+      </details>
+
+      <details>
+        <summary>Dataset / Setting 2</summary>
+        <div class="grid">
+          <figure><img src="assets/results/cmp_s2_1.png" alt=""><figcaption>Case 1</figcaption></figure>
+          <figure><img src="assets/results/cmp_s2_2.png" alt=""><figcaption>Case 2</figcaption></figure>
+          <figure><img src="assets/results/cmp_s2_3.png" alt=""><figcaption>Case 3</figcaption></figure>
+        </div>
+      </details>
+    </section>
+
+    <!-- Ablations -->
+    <section id="ablations" class="section">
+      <h2>Ablations</h2>
+
+      <div class="twocol">
+        <div class="card">
+          <h3>Quantitative</h3>
+          <p class="muted">Paste a table here (HTML) or embed a screenshot.</p>
+          <img class="figure" src="assets/ablations/table.png" alt="ablation table" />
+          <p class="cap">Table: Ablation on components.</p>
+        </div>
+        <div class="card">
+          <h3>Qualitative</h3>
+          <img class="figure" src="assets/ablations/qual.png" alt="ablation qual" />
+          <p class="cap">More cases consistent with Table X.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Runtime -->
+    <section id="runtime" class="section">
+      <h2>Runtime & Memory</h2>
+      <div class="card">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Method</th><th>Steps</th><th>Time / img</th><th>VRAM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ours</td><td>30</td><td>0.8s</td><td>10GB</td></tr>
+            <tr><td>Baseline A</td><td>50</td><td>1.5s</td><td>12GB</td></tr>
+          </tbody>
+        </table>
+        <p class="cap">Measured on A100 (replace with your setup).</p>
+      </div>
+    </section>
+
+    <!-- Failures -->
+    <section id="failures" class="section">
+      <h2>Failure Cases & Limitations</h2>
+      <p class="muted">A small honest section increases trust.</p>
+      <div class="grid">
+        <figure><img src="assets/failures/f1.png" alt=""><figcaption>Failure: reflective surfaces.</figcaption></figure>
+        <figure><img src="assets/failures/f2.png" alt=""><figcaption>Failure: extreme viewpoint.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video" class="section">
+      <h2>Video</h2>
+      <div class="card">
+        <video class="video" controls playsinline>
+          <source src="assets/videos/demo.mp4" type="video/mp4" />
+        </video>
+        <p class="cap">Demo video.</p>
+      </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section id="bibtex" class="section">
+      <h2>BibTeX</h2>
+      <div class="card">
+        <pre class="code"><code>@inproceedings{anonymous2026paper,
+  title   = {Your Paper Title},
+  author  = {Anonymous Authors},
+  booktitle = {XXX},
+  year    = {2026}
+}</code></pre>
+        <button class="btn small" onclick="copyBib()">Copy</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Anonymous Authors</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyBib() {
+      const text = document.querySelector("#bibtex code").innerText;
+      navigator.clipboard.writeText(text);
+    }
+  </script>
+</body>
 </html>
