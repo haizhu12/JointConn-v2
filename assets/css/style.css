@@ -1,3 +1,7 @@
+body { background: #fff4f4 !important; }
+h1 { color: red !important; }
+
+
 :root{
   --bg:#ffffff;
   --fg:#111;
@@ -76,3 +80,4 @@ details .grid{margin-top:10px;}
   .hero-inner h1{font-size:30px;}
   .nav-links{display:none;}
 }
+
