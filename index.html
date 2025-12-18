@@ -39,10 +39,28 @@
         <a class="btn ghost" href="#bibtex">BibTeX</a>
       </div>
 
-      <div class="teaser">
+      <!-- <div class="teaser">
         <img src="assets/teaser.png" alt="teaser" />
         <div class="cap">Teaser: One-sentence summary of what the figure shows.</div>
-      </div>
+      </div> -->
+
+      <div class="teaser">
+  <div class="carousel" id="teaserCarousel" tabindex="0" aria-label="Teaser carousel">
+    <button class="carousel-btn prev" type="button" aria-label="Previous image">‹</button>
+
+    <img id="teaserImg"
+         src="/JointConn-v2/assets/teaser/teaser.png"
+         alt="Teaser"
+         loading="eager" />
+
+    <button class="carousel-btn next" type="button" aria-label="Next image">›</button>
+
+    <div class="carousel-dots" id="teaserDots"></div>
+  </div>
+
+  <div class="cap">Teaser: One-sentence summary of what the figure shows.</div>
+</div>
+
     </div>
   </header>
 
