@@ -243,5 +243,73 @@
       navigator.clipboard.writeText(text);
     }
   </script>
+
+  <script>
+  (function () {
+    // 你可以改成更多张
+    const images = [
+      "/JointConn-v2/assets/teaser/1.png",
+      "/JointConn-v2/assets/teaser/2.png",
+      "/JointConn-v2/assets/teaser/3.png"
+    ];
+
+    const carousel = document.getElementById("teaserCarousel");
+    const imgEl = document.getElementById("teaserImg");
+    const dotsEl = document.getElementById("teaserDots");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
+
+    let idx = 0;
+
+    function renderDots() {
+      dotsEl.innerHTML = "";
+      images.forEach((_, i) => {
+        const d = document.createElement("button");
+        d.type = "button";
+        d.className = "carousel-dot" + (i === idx ? " active" : "");
+        d.ariaLabel = "Go to image " + (i + 1);
+        d.addEventListener("click", () => setIndex(i));
+        dotsEl.appendChild(d);
+      });
+    }
+
+    function setIndex(i) {
+      idx = (i + images.length) % images.length;
+      imgEl.src = images[idx];
+      // 更新 dots
+      Array.from(dotsEl.children).forEach((node, k) => {
+        node.classList.toggle("active", k === idx);
+      });
+    }
+
+    function next() { setIndex(idx + 1); }
+    function prev() { setIndex(idx - 1); }
+
+    nextBtn.addEventListener("click", next);
+    prevBtn.addEventListener("click", prev);
+
+    // 点击图片区域左右切换：鼠标点击左半边=上一张，右半边=下一张
+    carousel.addEventListener("click", (e) => {
+      // 避免点到按钮重复触发
+      if (e.target.closest(".carousel-btn") || e.target.closest(".carousel-dot")) return;
+      const rect = carousel.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      if (x < rect.width / 2) prev(); else next();
+    });
+
+    // 键盘左右键切换
+    carousel.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    });
+
+    // 预加载
+    images.forEach((u) => { const im = new Image(); im.src = u; });
+
+    renderDots();
+    setIndex(0);
+  })();
+</script>
+
 </body>
 </html>
