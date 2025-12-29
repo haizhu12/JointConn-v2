@@ -70,7 +70,7 @@
         This work revisits diffusion Transformers for text-depth–conditioned and joint image synthesis, focusing on two bottlenecks: (1) cross-modal attention degrades around edges and structural regions, causing geometric distortions; (2) the depth branch is easily dragged by the semantic branch, leading to over-coupling and instability. To address these issues, we propose JointConn-v2 with GCM-WFM (Gated Cross-Modal Weighted Flow Matching), a unified framework for joint and depth-conditioned image synthesis. JointConn-v2 strengthens bidirectional guidance via Swap-Q cross-attention, explicitly injects 2D relative positions and edge energy into the attention logits through a Geometric Mask Bias, performs token-level spatial selection of “to fuse / not to fuse” via Regional Routing, and stabilizes cross-branch injection at both the sample and structural levels using a Content Gate with residual fusion. 
         On the training side, we introduce GCM-WFM, which regresses a joint vector field in the packed sequence space and incorporates temporal, geometric, gating, and routing terms into the objective with diagonal weights. Our approach achieves a better balance between edge controllability and  cross-modal consistency.
       </p>
-      <div class="callouts">
+      <div class="twocol">
         <div class="card">
           <h3>Key Words</h3>
           <p>Diffusion Transformer, Flow Matching, LoRA, Cross-modal Generation, Depth-conditioned Generation</p>
