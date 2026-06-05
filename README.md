@@ -1,4 +1,4 @@
-# JointConn-v2
+# JointConn-v2: Learning a Joint Vector Field with Diffusion Transformers for Cross-Scale Connectivity and Dual-Timestep Modeling
 
 JointConn-v2 is a research codebase for RGB-depth joint generation and depth-conditioned image generation. The implementation is built on a frozen FLUX.1-dev style Diffusion Transformer backbone, with trainable LoRA adapters and JointConn-v2 cross-modal connector modules.
 
