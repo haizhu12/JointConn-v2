@@ -1,0 +1,2 @@
+{"case_id":"d2i_flower","task":"depth_to_image","prompt":"a red flower with yellow centers is blooming","input_depth":"experiments/validation/fixed_set/depth_inputs/d2i_flower_depth.npy","reference_image":"experiments/validation/fixed_set/reference_images/d2i_flower_origin.jpg","seed":42,"resolution":[512,512],"sample_steps_smoke":4}
+{"case_id":"joint_castle","task":"joint_generation","prompt":"castle","input_depth":null,"reference_image":null,"seed":42,"resolution":[512,512],"sample_steps_smoke":4}

@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets / local environment
+.env
+.env.*
+*.pem
+*.key
+
+# Model weights and large checkpoint formats
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.h5
+*.msgpack
+models/
+checkpoints/
+
+# Downloaded external model repositories and caches
+google/
+openai/
+runwayml/
+lllyasviel/
+Depth-Anything-V2/
+LLaVA/
+sd-scripts/
+models/.locks/
+
+# Datasets and latent caches
+data/
+image_dataset/
+evaluation_prompts/
+empty_prompts/
+
+# Experiment outputs and generated runs
+outputs/
+outputs_joint_generation/
+out/
+depth_overlap_outputs/
+TD2I_experment/
+test1/
+ex/
+experiemnts/
+*.log
+experiments/**
+!experiments/
+!experiments/progress.md
+!experiments/validation/
+!experiments/validation/fixed_set/
+!experiments/validation/fixed_set/**
+
+# Local archives from the JointDiT / JointConn-v2 separation step
+code_split/
+
+# Remotion generated artifacts
+video_jointconn_v2/.git/
+video_jointconn_v2/node_modules/
+video_jointconn_v2/out/
+video_jointconn_v2/dist/
+
+# Original paper PDFs may be license-sensitive for public release
+docs/*.pdf
+
+# Legacy shell helpers with local absolute paths
+train.sh
+inference.sh
+dataset/preprocess_step2.sh
+dataset/preprocess_step3.sh
+
+# Local scratch scripts and early demo outputs not used by the release workflow
+3chnal.py
+angle_heatmap.py
+inference_40promt.py
+lesson13_*.py
+make_depth_overlap.py
+Tiqutxt.py
+to_rgb.py
+txt_depth2img.py
+canny.png
+out_castle.png
+out_sd15.png
+sd_text2img.png
+python
