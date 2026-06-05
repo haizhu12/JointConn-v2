@@ -706,10 +706,9 @@ Read these before continuing experiments:
 
 ## 13. Lineage and Citation Notes
 
-This project is derived from the original JointDiT/FLUX code lineage and extends it for JointConn-v2 research. Preserve original citations, model licenses, and dataset licenses when preparing a paper release or public repository.
+This project is derived from the original FLUX code lineage and extends it for JointConn-v2 research. Preserve original citations, model licenses, and dataset licenses when preparing a paper release or public repository.
 
 Original references:
 
-- JointDiT project page: https://byungki-k.github.io/JointDiT/
 - FLUX.1-dev model: https://huggingface.co/black-forest-labs/FLUX.1-dev
 - Depth Anything V2 repository: https://github.com/DepthAnything/Depth-Anything-V2
