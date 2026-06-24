@@ -4,7 +4,8 @@ JointConn-v2 is a research codebase for RGB-depth joint generation and depth-con
 
 This repository is the modified JointConn-v2 workspace. Original JointDiT baseline runs should be launched from the separately downloaded original JointDiT repository, not from this workspace.
 
-![JointConn-v2 framework](assets/jointconn_v2_framework.png)
+<img width="2222" height="1221" alt="MAIN1" src="https://github.com/user-attachments/assets/94f8e047-eec6-4900-810d-1dd630b6c600" />
+
 
 ## Qualitative Showcase
 
